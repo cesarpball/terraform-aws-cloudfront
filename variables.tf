@@ -23,75 +23,17 @@ variable "comment" {
 }
 
 variable "default_root_object" {
-  default = "index.html"
-}
-
-
-#Origin
-
-variable "domain_name" {
   default = ""
 }
 
-variable "origin_id" {
-  default = ""
-}
-
-
-variable "origin_access_identity" {
-  default = ""
-}
-
-# Loggig config
-variable "include_cookies" {
-  default = false
-}
-
-variable "bucket" {
-  default = ""
-}
-
-variable "prefix" {
-  default = ""
-}
-#
 variable "aliases" {
   default     = []
   description = "Extra CNAMEs (alternate domain names), if any, for this distribution."
   type        = list(string)
 }
 
-# default_cache_behavior
-variable "allowed_methods" {
-  default     = ["GET", "HEAD", "OPTIONS"]
-  description = "HTTP, GET"
-  type        = list(string)
-}
-
-variable "cached_methods" {
-  default     = ["GET", "HEAD", "OPTIONS"]
-  description = "HTTP, GET"
-  type        = list(string)
-}
-variable "target_origin_id" {
-  default = ""
-}
-
-# forwarded_values
-variable "query_string" {
-  default = false
-}
-# cookies
-variable "forward" {
-  default = "none"
-}
-
-variable "viewer_protocol_policy" {
-  default = false
-}
 
 #geo_restriction
-
 variable "restriction_type" {
   default = "none"
 }
@@ -194,4 +136,3 @@ variable "ordered_cache_behavior_variables" {
     },
   ]
 }
-

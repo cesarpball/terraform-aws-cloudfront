@@ -1,12 +1,29 @@
 Cloudfront module
 ==========================
-
+This module is written in Terraform 0.12 to create Cloudfront distributiions using multiple origins (S3 or ALB) and dynamic
+behaviour
 
 
 Variables
 ---------
- TO-DO
-
+ - `environment`: Optional. To create an cloudfront name and using in the locals origin_id
+ - `app_name`: Optional. To create an cloudfront name and using in the locals origin_id
+ - `role`: Optional. To create an cloudfront name and using in the locals origin_id
+ - `enable`: Mandatory. Boolean to enable the Cloudfront distribution or not. Defaults true
+ - `is_ipv6_enabled`: Optional. Boolean to enable IPv6. Defaults true
+ - `comment`: Optional. Description of your comment for your CloudFront
+ - `default_root_object`: Optional. Root index object. Defaults empty
+ - `aliases`: Optional.  Extra CNAMEs (alternate domain names), if any, for this distribution.
+ - `restriction_type`: Mandatory for geo_restrictions. Defaults to none
+ - `locations`: Mandatory if a geo_restriction is not set to none. Country codes: ISO 3166-1-alpha-2 codes
+ - `price_class`: Optional. The price class for this distribution. Defaults to PriceClass_200
+ - `cloudfront_default_certificate`: Mandatory. if you want viewers to use HTTPS to request your objects and you're using the CloudFront domain name for your distribution
+ - `cloudfront_logging_enabled`: Optional. If set to true, a bucket must to be set. See logging_config. Defaults to false
+ - `s3_origin_configs`: Mandatory. At least one origin must to be specified between `s3_origin_configs` or `custom_origin_configs`
+ - `custom_origin_configs`: Mandatory. At least one origin must to be specified between `s3_origin_configs` or `custom_origin_configs`
+ - `default_cache_behavior`: Mandatory. Default values has been set on `variables.tf`
+ - `ordered_cache_behavior_variables`: Mandatory. Default values has been set on `variables.tf`
+ 
 Examples
 --------
 * Long example:
