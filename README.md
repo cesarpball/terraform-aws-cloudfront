@@ -23,7 +23,9 @@ Variables
  - `custom_origin_configs`: Mandatory. At least one origin must to be specified between `s3_origin_configs` or `custom_origin_configs`
  - `default_cache_behavior`: Mandatory. Default values has been set on `variables.tf`
  - `ordered_cache_behavior_variables`: Mandatory. Default values has been set on `variables.tf`
- 
+ - `waf_web_acl_id`: Optional. If provided it will be used and attached to distribution
+ - `acm_certificate_arn_config`: Optional. If nothing is specified it goes to the default certificate. Viewer Certificate Arguments
+
 Examples
 --------
 * Long example:
