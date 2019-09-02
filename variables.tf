@@ -141,3 +141,11 @@ variable "waf_web_acl_id" {
   description = "The Id of the AWS WAF web ACL that is associated with the distribution. "
   default     = ""
 }
+
+variable "acm_certificate_arn_config" {
+  default = {
+    acm_certificate_arn      = null
+    minimum_protocol_version = "TLSv1.1_2016"
+    ssl_support_method       = "sni-only"
+  }
+}
