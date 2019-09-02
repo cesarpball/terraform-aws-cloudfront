@@ -136,3 +136,8 @@ variable "ordered_cache_behavior_variables" {
     },
   ]
 }
+
+variable "waf_web_acl_id" {
+  description = "The Id of the AWS WAF web ACL that is associated with the distribution. "
+  default     = ""
+}

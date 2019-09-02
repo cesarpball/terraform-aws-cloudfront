@@ -141,4 +141,6 @@ resource "aws_cloudfront_distribution" "cf_distribution" {
   viewer_certificate {
     cloudfront_default_certificate = var.cloudfront_default_certificate
   }
+
+  web_acl_id = var.waf_web_acl_id
 }
