@@ -1,3 +1,6 @@
+## [0.0.3](https://github.com/cesarpball/terraform-aws-cloudfront.git) (Sept 3, 2019)
+- Outputs definition
+
 ## [0.0.2](https://github.com/cesarpball/terraform-aws-cloudfront.git) (Sept 2, 2019)
 
 - Add web_acl_id variable
