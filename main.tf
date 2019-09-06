@@ -139,15 +139,15 @@ resource "aws_cloudfront_distribution" "cf_distribution" {
   }
 
   # Optional certificate
-    dynamic "viewer_certificate" {
-      for_each = local.acm_certificate_arn_configs[local.enable_certificate]
-      content {
-        acm_certificate_arn            = viewer_certificate.value.acm_certificate_arn
-        minimum_protocol_version       = viewer_certificate.value.minimum_protocol_version
-        ssl_support_method             = viewer_certificate.value.ssl_support_method
-        cloudfront_default_certificate = viewer_certificate.value.cloudfront_default_certificate
-      }
+  dynamic "viewer_certificate" {
+    for_each = local.acm_certificate_arn_configs[local.enable_certificate]
+    content {
+      acm_certificate_arn            = viewer_certificate.value.acm_certificate_arn
+      minimum_protocol_version       = viewer_certificate.value.minimum_protocol_version
+      ssl_support_method             = viewer_certificate.value.ssl_support_method
+      cloudfront_default_certificate = viewer_certificate.value.cloudfront_default_certificate
     }
+  }
 
   web_acl_id = var.waf_web_acl_id
 }
