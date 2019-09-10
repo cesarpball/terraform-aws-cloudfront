@@ -150,4 +150,6 @@ resource "aws_cloudfront_distribution" "cf_distribution" {
   }
 
   web_acl_id = var.waf_web_acl_id
+
+  tags = "${var.tags}"
 }

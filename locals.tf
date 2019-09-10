@@ -1,10 +1,3 @@
-# ID
-
-locals {
-  origin_id        = "${var.origin_id != "" ? var.origin_id : "S3-${var.app_name}-${var.role}-${var.environment}"}"
-  target_origin_id = "${var.target_origin_id != "" ? var.target_origin_id : var.origin_id}"
-}
-
 # Logging config enabled
 locals {
   cloudfront_logging_configs = {

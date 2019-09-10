@@ -149,3 +149,9 @@ variable "acm_certificate_arn_config" {
     ssl_support_method       = "sni-only"
   }
 }
+
+variable "tags" {
+  description = "A map of tags to add to your cloudfront distribution"
+  default     = {}
+  type        = map
+}
