@@ -1,3 +1,6 @@
+## [0.0.4](https://github.com/cesarpball/terraform-aws-cloudfront.git) (Sept 10, 2019)
+- Default definition variables
+
 ## [0.0.3](https://github.com/cesarpball/terraform-aws-cloudfront.git) (Sept 3, 2019)
 - Outputs definition
 

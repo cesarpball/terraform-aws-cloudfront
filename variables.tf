@@ -79,9 +79,18 @@ variable "s3_origin_configs" {
 
 variable "custom_origin_configs" {
 
-  type        = list(map(string))
   description = "Define values for origin or multiple origins"
-  default     = []
+  default = {
+    domain_name              = ""
+    origin_id                = ""
+    origin_path              = "/"
+    http_port                = "80"
+    https_port               = "443"
+    origin_keepalive_timeout = 5
+    origin_read_timeout      = 30
+    origin_protocol_policy   = "https-only"
+    origin_ssl_protocols     = ["TLSv1", "TLSv1.1", "TLSv1.2"]
+  }
 }
 
 variable "default_cache_behavior" {
