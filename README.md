@@ -25,6 +25,7 @@ Variables
  - `ordered_cache_behavior_variables`: Mandatory. Default values has been set on `variables.tf`
  - `waf_web_acl_id`: Optional. If provided it will be used and attached to distribution
  - `acm_certificate_arn_config`: Optional. If nothing is specified it goes to the default certificate. Viewer Certificate Arguments
+ - `tags`: Optional. Tags added to cloudfront distribution
 
 Examples
 --------
