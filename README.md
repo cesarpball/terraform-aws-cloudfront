@@ -2,8 +2,8 @@ Cloudfront module
 ==========================
 Create Cloudfront distributions using multiple origins (S3 or ALB) and dynamic behaviour
 
-v3.0.0 -> Terraform version 0.13
-v2.0.0 -> Terraform version 0.12
+- v3.0.0 -> Terraform version 0.13
+- v2.0.0 -> Terraform version 0.12
 
 
 Variables
