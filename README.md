@@ -1,7 +1,9 @@
 Cloudfront module
 ==========================
-This module is written in Terraform 0.12 to create Cloudfront distributiions using multiple origins (S3 or ALB) and dynamic
-behaviour
+Create Cloudfront distributions using multiple origins (S3 or ALB) and dynamic behaviour
+
+v3.0.0 -> Terraform version 0.13
+v2.0.0 -> Terraform version 0.12
 
 
 Variables
