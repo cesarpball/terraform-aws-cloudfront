@@ -35,7 +35,8 @@ Examples
 
 ```hcl
 module "cloudfront_dev" {
-  source cesarpball/module
+  source  = "cesarpball/cloudfront/aws"
+  version = "v3.0.0"
 
   app_name    = "app_name"
   role        = "frontend"
